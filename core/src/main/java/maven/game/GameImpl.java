@@ -8,6 +8,13 @@ public class GameImpl implements Game {
     // == constants ==
     private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
+    /**
+     * == constructors ==
+     * public GameImpl(NumberGenerator numberGenerator) {
+     * this.numberGenerator = numberGenerator;
+     * }
+     */
+
     // == fields ==
     private NumberGenerator numberGenerator;
     private int guessCount = 10;
@@ -19,6 +26,9 @@ public class GameImpl implements Game {
     private boolean validNumberRange = true;
 
     // == public methods ==
+    public void setNumberGenerator(NumberGenerator numberGenerator){
+        this.numberGenerator = numberGenerator;
+    }
     @Override
     public void reset() {
         smallest = 0;
@@ -57,11 +67,6 @@ public class GameImpl implements Game {
     @Override
     public int getRemainingGuesses() {
         return remainingGuesses;
-    }
-
-    // == constructors ==
-    public GameImpl(NumberGenerator numberGenerator) {
-        this.numberGenerator = numberGenerator;
     }
 
     @Override

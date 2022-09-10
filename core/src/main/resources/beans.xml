@@ -6,6 +6,9 @@
     <bean id="numberGenerator" class="maven.game.NumberGeneratorImpl"/>
 
     <bean id="game" class="maven.game.GameImpl">
+        <!--
         <constructor-arg ref="numberGenerator" />
+        -->
+        <property name="numberGenerator" ref="numberGenerator" />
     </bean>
 </beans>
