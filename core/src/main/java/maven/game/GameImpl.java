@@ -59,6 +59,10 @@ public class GameImpl implements Game {
         return remainingGuesses;
     }
 
+    // == constructors ==
+    public GameImpl(NumberGenerator numberGenerator) {
+        this.numberGenerator = numberGenerator;
+    }
 
     @Override
     public void check() {
