@@ -5,10 +5,11 @@
            http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="numberGenerator" class="maven.game.NumberGeneratorImpl"/>
 
-    <bean id="game" class="maven.game.GameImpl">
+    <bean id="game" class="maven.game.GameImpl" init-method="reset" >
         <!--
         <constructor-arg ref="numberGenerator" />
         -->
         <property name="numberGenerator" ref="numberGenerator" />
     </bean>
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
 </beans>
