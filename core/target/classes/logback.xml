@@ -4,7 +4,7 @@
             <pattern>%date [%thread] [%-5level] %logger{40} -- message : %message%n</pattern>
         </encoder>
     </appender>
-    
+
     <springProperty scope="context" name="loggerProperty" source="logging.level.root"/>
     <logger name="maven.game" level="DEBUG"/>
     <logger name="org.springframework" level="DEBUG"/>
