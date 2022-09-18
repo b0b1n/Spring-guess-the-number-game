@@ -1,10 +1,13 @@
-package maven.game;
+package maven.game.console;
 
+import maven.game.AppConfig;
+import maven.game.Game;
+import maven.game.MessageGenerator;
+import maven.game.NumberGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     private static final Logger log = LoggerFactory.getLogger(Main.class);

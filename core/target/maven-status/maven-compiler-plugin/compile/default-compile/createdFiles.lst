@@ -1,5 +1,7 @@
+maven\game\AppConfig.class
+maven\game\MessageGenerator.class
 maven\game\NumberGenerator.class
 maven\game\NumberGeneratorImpl.class
 maven\game\GameImpl.class
-maven\game\Main.class
+maven\game\MessageGeneratorImpl.class
 maven\game\Game.class
