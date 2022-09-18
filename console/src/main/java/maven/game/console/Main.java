@@ -1,6 +1,6 @@
 package maven.game.console;
 
-import maven.game.AppConfig;
+import maven.game.config.AppConfig;
 import maven.game.Game;
 import maven.game.MessageGenerator;
 import maven.game.NumberGenerator;
@@ -11,7 +11,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Main {
     private static final Logger log = LoggerFactory.getLogger(Main.class);
-
     public static void main(String[] args) {
         log.info("Guess the number game");
 

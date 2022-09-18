@@ -26,20 +26,20 @@ public class ConsoleNumberGuess {
 
     // == events ==
     @EventListener(ContextRefreshedEvent.class)
-    public void start(ContextRefreshedEvent event) {
+    public void start() {
         log.info(" ==> start() --> Container ready to be used.");
 
         Scanner scanner = new Scanner(System.in);
         while (true){
             System.out.println(messageGenerator.getMainMessage());
-            System.out.println(messageGenerator.getResultMessage());
+            System.out.print(messageGenerator.getResultMessage() + "\t");
             //Getting input from the user
             int guess = scanner.nextInt();
             scanner.nextLine();
             game.setGuess(guess);
             //check the user guess
             game.check();
-            
+
             if(game.isGameWon() || game.isGameLost()){
                 System.out.println(messageGenerator.getResultMessage());
                 System.out.println("Play again y/n?");
