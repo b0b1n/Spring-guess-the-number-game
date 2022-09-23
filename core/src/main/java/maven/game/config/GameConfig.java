@@ -2,6 +2,7 @@ package maven.game.config;
 
 import maven.game.GuessCount;
 import maven.game.MaxNumber;
+import maven.game.MinNumber;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +15,11 @@ public class GameConfig {
     @Value("${game.maxNumber:20}")// Default value is 20 in case game.guessCount wasn't found
     private int maxNumber;
     @Value("${game.guessCount:5}") // Default value is 5 in case game.guessCount wasn't found
-    private int guessCount = 8;
+    private int guessCount;
+
+    @Value("${game.minNumber:5}")
+    private int minNumber;
+
 
     // == bean methods
     @Bean
@@ -22,9 +27,16 @@ public class GameConfig {
     public int getMaxNumber() {
         return maxNumber;
     }
+
     @Bean
     @GuessCount
     public int getGuessCount() {
         return guessCount;
+    }
+
+    @Bean
+    @MinNumber
+    public int getMinNumber() {
+        return minNumber;
     }
 }

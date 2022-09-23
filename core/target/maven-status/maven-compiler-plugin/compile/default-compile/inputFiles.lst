@@ -1,7 +1,11 @@
+D:\Projects\Java Projects\Maven projects\guess-the-number-game\core\src\main\java\maven\game\MinNumber.java
 D:\Projects\Java Projects\Maven projects\guess-the-number-game\core\src\main\java\maven\game\Game.java
 D:\Projects\Java Projects\Maven projects\guess-the-number-game\core\src\main\java\maven\game\NumberGeneratorImpl.java
-D:\Projects\Java Projects\Maven projects\guess-the-number-game\core\src\main\java\maven\game\AppConfig.java
+D:\Projects\Java Projects\Maven projects\guess-the-number-game\core\src\main\java\maven\game\GuessCount.java
+D:\Projects\Java Projects\Maven projects\guess-the-number-game\core\src\main\java\maven\game\MaxNumber.java
+D:\Projects\Java Projects\Maven projects\guess-the-number-game\core\src\main\java\maven\game\config\AppConfig.java
 D:\Projects\Java Projects\Maven projects\guess-the-number-game\core\src\main\java\maven\game\NumberGenerator.java
+D:\Projects\Java Projects\Maven projects\guess-the-number-game\core\src\main\java\maven\game\config\GameConfig.java
 D:\Projects\Java Projects\Maven projects\guess-the-number-game\core\src\main\java\maven\game\GameImpl.java
 D:\Projects\Java Projects\Maven projects\guess-the-number-game\core\src\main\java\maven\game\MessageGenerator.java
 D:\Projects\Java Projects\Maven projects\guess-the-number-game\core\src\main\java\maven\game\MessageGeneratorImpl.java
