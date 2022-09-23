@@ -1,9 +1,6 @@
 package maven.game.console;
 
-import maven.game.config.AppConfig;
-import maven.game.Game;
-import maven.game.MessageGenerator;
-import maven.game.NumberGenerator;
+import maven.game.config.GameConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -15,7 +12,7 @@ public class Main {
         log.info("\t\tGuess the number game");
 
         // create context (container)
-        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(GameConfig.class);
 
         //close context(context)
         context.close();
