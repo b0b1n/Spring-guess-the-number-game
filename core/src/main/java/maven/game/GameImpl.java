@@ -1,5 +1,8 @@
 package maven.game;
 
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +11,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+@Getter
 @Component
 public class GameImpl implements Game {
 
@@ -22,10 +26,12 @@ public class GameImpl implements Game {
      */
 
     // == fields ==
-    private final NumberGenerator numberGenerator;
-    private final int guessCount ;
+
+    private @Getter(AccessLevel.NONE)
+    final NumberGenerator numberGenerator;
+    private final int guessCount;
     private int number;
-    private int guess;
+    private @Setter int guess;
     private int smallest;
     private int biggest;
     private int remainingGuesses;
@@ -68,41 +74,6 @@ public class GameImpl implements Game {
      */
 
     @Override
-    public int getNumber() {
-        return number;
-    }
-
-    @Override
-    public int getGuess() {
-        return guess;
-    }
-
-    @Override
-    public void setGuess(int guess) {
-        this.guess = guess;
-    }
-
-    @Override
-    public int getSmallest() {
-        return smallest;
-    }
-
-    @Override
-    public int getBiggest() {
-        return biggest;
-    }
-
-    @Override
-    public int getRemainingGuesses() {
-        return remainingGuesses;
-    }
-
-    @Override
-    public int getGuessCount() {
-        return guessCount;
-    }
-
-    @Override
     public void check() {
         checkValidNumberRange();
         if (validNumberRange) {
@@ -114,11 +85,6 @@ public class GameImpl implements Game {
             }
         }
         remainingGuesses--;
-    }
-
-    @Override
-    public boolean isValidNumberRange() {
-        return validNumberRange;
     }
 
     @Override
