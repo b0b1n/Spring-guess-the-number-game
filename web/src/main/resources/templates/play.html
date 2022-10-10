@@ -16,8 +16,9 @@
         <input th:type="submit" th:value="submit">
     </form>
 
-    <footer>
-        <p>Created by : <b>Sohaib Skious</b></p>
+
+    <footer th:replace="~{fragments/footer :: footerFragment}">
+        <p>Created by </p>
     </footer>
 </div>
 </body>
