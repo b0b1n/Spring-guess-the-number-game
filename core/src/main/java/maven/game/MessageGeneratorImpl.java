@@ -14,6 +14,13 @@ import javax.annotation.PostConstruct;
 public class MessageGeneratorImpl implements MessageGenerator {
     // == constants ==
     private static final String MAIN_MESSAGE = "game.main.message";
+    private static final String GAME_WON = "game.won";
+    private static final String GAME_LOST = "game.lost";
+    private static final String INVALID_RANGE = "game.invalid.range";
+    private static final String FIRST_GUESS = "game.first.guess";
+    private static final String GUESSES_LEFT = "game.guessesLeft";
+    private static final String HIGHER = "game.higher";
+    private static final String LOWER = "game.lower";
     // == fields ==
     private final Game game;
     private final MessageSource messageSource;
@@ -36,22 +43,19 @@ public class MessageGeneratorImpl implements MessageGenerator {
     public String getResultMessage() {
 
         if (game.isGameWon()) {
-            return " Congratulations!! You won ... The number you guessed was : " + game.getNumber();
+            return getMessage(GAME_WON,game.getNumber());
         } else if (game.isGameLost()) {
-            return "A A AAH!! You lost  :( ... The number  was : " + game.getNumber();
+            return getMessage(GAME_LOST, game.getNumber());
         } else if (!game.isValidNumberRange()) {
-            return "The number you guessed is out of range :(";
+            return getMessage(INVALID_RANGE);
         } else if (game.getRemainingGuesses() == game.getGuessCount()) {
-            return "number is between "
-                    + game.getSmallest()
-                    + " and " + game.getBiggest()
-                    + " . Can you guess it? What will your first guess be? ";
+            return getMessage(FIRST_GUESS, game.getSmallest(), game.getBiggest());
         } else {
-            String direction = "Lower";
+            String direction = getMessage(LOWER);
             if (game.getGuess() < game.getNumber()) {
-                direction = "Higher";
+                direction = getMessage(HIGHER);
             }
-            return direction + "!! You have : " + game.getRemainingGuesses() + " guesses left .";
+            return getMessage(GUESSES_LEFT, direction, game.getRemainingGuesses());
         }
     }
 
