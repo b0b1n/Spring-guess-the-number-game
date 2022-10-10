@@ -1,3 +1,8 @@
 maven\config\WebConfig.class
+maven\controller\GameController.class
 maven\util\ViewNames.class
+maven\util\GameMappings.class
 maven\WebMain.class
+maven\service\GameServiceImpl.class
+maven\util\AttributeNames.class
+maven\service\GameService.class

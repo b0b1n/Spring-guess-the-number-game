@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -11,13 +10,13 @@
     <h3 th:text="${mainMessage}">Main message content</h3>
     <h3 th:text="${resultMessage}">Result message content</h3>
 
-    <form method="post" action="play">
+    <form method="post" th:action="play" action="play2">
         <label for="guess"> Enter your guess </label>
         <input id="guess" th:type="number" name="guess"/>
         <input th:type="submit" th:value="submit">
     </form>
 
-    <footer >
+    <footer>
         <p>Created by : <b>Sohaib Skious</b></p>
     </footer>
 </div>

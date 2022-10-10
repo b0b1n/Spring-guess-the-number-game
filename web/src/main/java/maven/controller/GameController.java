@@ -25,19 +25,29 @@ public class GameController {
     public GameController(GameService gameService) {
         this.gameService = gameService;
     }
+
     @GetMapping(GameMappings.PLAY)
-    public String play(Model model){
+    public String play(Model model) {
         model.addAttribute(AttributeNames.MAIN_MESSAGE, gameService.getMainMessage());
         model.addAttribute(AttributeNames.RESULT_MESSAGE, gameService.getResultMessage());
         log.info("model = {}", model);
-        return gameService.isGameOver() ? ViewNames.GAME_OVER : ViewNames.PLAY;
+        if (gameService.isGameOver()) {
+            return ViewNames.GAME_OVER;
+        }
+
+        return ViewNames.PLAY;
     }
+
     @PostMapping(GameMappings.PLAY)
-    public String processMessage(@RequestParam int guess){
+    public String processMessage(@RequestParam int guess) {
         log.info("guess = {}", guess);
         gameService.checkGuess(guess);
         return GameMappings.REDIRECT_PLAY;
     }
-
+@GetMapping(GameMappings.RESTART)
+    public String restart(){
+        gameService.reset();
+        return GameMappings.REDIRECT_PLAY;
+    }
 
 }
