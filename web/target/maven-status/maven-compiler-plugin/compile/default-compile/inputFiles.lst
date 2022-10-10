@@ -1,6 +1,7 @@
 D:\Projects\Java Projects\Maven projects\guess-the-number-game\web\src\main\java\maven\util\GameMappings.java
 D:\Projects\Java Projects\Maven projects\guess-the-number-game\web\src\main\java\maven\config\WebConfig.java
 D:\Projects\Java Projects\Maven projects\guess-the-number-game\web\src\main\java\maven\service\GameService.java
+D:\Projects\Java Projects\Maven projects\guess-the-number-game\web\src\main\java\maven\util\thymeleaf\DecoupledLogicSetup.java
 D:\Projects\Java Projects\Maven projects\guess-the-number-game\web\src\main\java\maven\service\GameServiceImpl.java
 D:\Projects\Java Projects\Maven projects\guess-the-number-game\web\src\main\java\maven\util\ViewNames.java
 D:\Projects\Java Projects\Maven projects\guess-the-number-game\web\src\main\java\maven\WebMain.java

@@ -1,8 +1,10 @@
 <thlogic>
     <attr sel="#head" th:replace="~{fragments/head :: headFragment}" />
+    <attr sel="#game-title" th:text="#{game.title}"/>
+    <attr sel="#game-over" th:text="#{game.over}"/>
     <attr sel="#result-message" th:text="${resultMessage}" />
-    <attr sel="#restart-game" th:with="restart=${T(maven.util.GameMappings).RESTART}" th:href="restart" />
-    <attr sel="#home" th:href="@{/}" />
+    <attr sel="#restart-game" th:with="restart=${T(maven.util.GameMappings).RESTART}" th:href="restart" th:text="#{game.replay}"/>
+    <attr sel="#home" th:href="@{/}" th:text="#{game.backHome}" />
     <attr sel="#footer" th:replace="~{fragments/footer :: footerFragment}" />
 
 </thlogic>

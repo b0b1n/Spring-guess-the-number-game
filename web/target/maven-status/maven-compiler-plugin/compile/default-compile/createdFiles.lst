@@ -1,5 +1,6 @@
 maven\config\WebConfig.class
 maven\util\ViewNames.class
+maven\util\thymeleaf\DecoupledLogicSetup.class
 maven\WebMain.class
 maven\service\GameServiceImpl.class
 maven\service\GameService.class

@@ -1,5 +1,4 @@
 maven\game\MessageGenerator.class
-maven\game\config\GameConfig.class
 maven\game\MaxNumber.class
 maven\game\NumberGenerator.class
 maven\game\NumberGeneratorImpl.class
@@ -8,3 +7,4 @@ maven\game\GameImpl.class
 maven\game\GuessCount.class
 maven\game\MessageGeneratorImpl.class
 maven\game\Game.class
+maven\game\config\GameConfig.class
