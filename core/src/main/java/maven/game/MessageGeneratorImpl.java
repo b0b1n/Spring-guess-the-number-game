@@ -2,20 +2,24 @@ package maven.game;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+
 @Slf4j
 @AllArgsConstructor
 @Component
 public class MessageGeneratorImpl implements MessageGenerator {
-
+    // == constants ==
+    private static final String MAIN_MESSAGE = "game.main.message";
     // == fields ==
     private final Game game;
+    private final MessageSource messageSource;
+
 
     // == constructor ==
-
-
     // == init ==
     @PostConstruct
     public void init() {
@@ -25,10 +29,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
     // == public method ==
     @Override
     public String getMainMessage() {
-        return "number in the range : [ "
-                + game.getSmallest()
-                + "  , " + game.getBiggest()
-                + " ]. Can you guess it?";
+        return getMessage(MAIN_MESSAGE, game.getSmallest(), game.getBiggest());
     }
 
     @Override
@@ -54,4 +55,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
         }
     }
 
+    private String getMessage(String code, Object... args) {
+        return messageSource.getMessage(code, args, LocaleContextHolder.getLocale());
+    }
 }
