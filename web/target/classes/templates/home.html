@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:replace="~{fragments/head :: headFragment}">
     <meta charset="UTF-8">
-    <title>Guess the Number Game</title>
+    <title>Title content </title>
 </head>
 <body>
 <div align="center">
     <h1>Welcome to Guess the Number Game</h1>
-    <a href="play" th:text="play">
+    <a href="play.html" th:text="play" th:href="play">
         Click to Play
     </a>
 </div>
