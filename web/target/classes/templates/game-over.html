@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/head :: headFragment}">
+<head id="head">
     <meta charset="UTF-8">
     <title>Game OVER</title>
 </head>
@@ -8,19 +8,19 @@
 <div align="center">
     <h1>Guess the Number Game</h1>
     <h2>Game Over</h2>
-    <h3 th:text="${resultMessage}">Result message content</h3>
+    <h3 id="result-message">Result message content</h3>
     <h3>
-        <a th:with="restart=${T(maven.util.GameMappings).RESTART}" th:href="restart"  >
+        <a id="restart-game"  >
             Play again
         </a>
     </h3>
     <h3>
-        <a th:href="@{/}" >
+        <a id="home" >
             Back to Home Page
         </a>
     </h3>
 
-    <footer th:replace="~{fragments/footer :: footerFragment}">
+    <footer id="footer">
         <p>Created by </p>
     </footer>
 </div>
