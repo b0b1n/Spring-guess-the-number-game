@@ -6,6 +6,6 @@
     <attr sel="#game-form" th:action="play"  />
     <attr sel="#enter-guess" th:text="#{game.enter.guess}"  />
     <attr sel="#guess" th:type="number"   />
-    <attr sel="#submit" th:value="#{game.submit}"  />
+    <attr sel="#submit" th:value="#{game.submit}" th:type="submit"  />
     <attr sel="#footerId" th:replace="~{fragments/footer :: footerFragment}"/>
 </thlogic>
