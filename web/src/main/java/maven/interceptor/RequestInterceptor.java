@@ -6,6 +6,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 @Slf4j
 public class RequestInterceptor implements HandlerInterceptor {
 
@@ -20,8 +21,8 @@ public class RequestInterceptor implements HandlerInterceptor {
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         log.info("postHandle method called, handler = {}", handler);
         log.info("URL = {{}}", request.getRequestURL());
-        if(modelAndView != null){
-            log.info("==> Model = {}",modelAndView.getModel());
+        if (modelAndView != null) {
+            log.info("==> Model = {}", modelAndView.getModel());
             log.info("==> View = {}", modelAndView.getViewName());
         }
 
